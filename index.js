@@ -26,6 +26,13 @@ async function run() {
       const cursor = cobblerServices.find(query).limit(limit)
       const service = await cursor.toArray()
       res.send(service)
+
+      app.get('/services', async (req, res) => {
+        const query = {}
+        const cursor = cobblerServices.find(query)
+        const services = await cursor.toArray()
+        res.send(services)
+      })
     })
   } finally {
   }
