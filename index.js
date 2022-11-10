@@ -20,6 +20,7 @@ const client = new MongoClient(uri, {
 async function run() {
   try {
     const cobblerServices = client.db('cobblerService').collection('services')
+    // get data
     app.get('/', async (req, res) => {
       const query = {}
       const limit = 3
