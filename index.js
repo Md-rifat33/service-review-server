@@ -50,6 +50,8 @@ async function run() {
 
 run().catch((err) => console.log(err))
 
+//  server setting
+
 app.get('/', (req, res) => {
   res.send('server is running')
 })
